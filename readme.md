@@ -35,7 +35,19 @@ It allows you to package an application with all of its dependencies into a stan
 
 ---
 
-### Docker History
+### From Monolithic apps
+
+![Monolithic Architecture](https://raw.githubusercontent.com/theodorosploumis/drupalcamp2016/gh-pages/img/monolithic.png)
+
+---
+
+### To Containerized apps
+
+![Containerized Architecture](https://raw.githubusercontent.com/theodorosploumis/drupalcamp2016/gh-pages/img/containerized.png)
+
+---
+
+### About Docker project
 
  - Solomon Hykes ([@solomonstre](https://twitter.com/solomonstre))
  - dotCloud (now Docker Inc)
@@ -172,7 +184,7 @@ docker run -i -t -d ubuntu:15.04 pwd
 
 ### The Dockerfile
 
-> A Dockerfile is a text document that contains all the commands a user could call on the command line to create an image.
+> A a text document that contains all the commands a user could call on the command line to create an image.
 
  - [Dockerfile with inline comments](https://github.com/theodorosploumis/drupalcamp2016/blob/gh-pages/examples/dockerfile/Dockerfile) just for education
  - Drupal related Dockerfiles ([Drupal](https://github.com/docker-library/drupal/blob/master/8.1/fpm/Dockerfile), [drush/drush](https://github.com/RobLoach/drush-docker/blob/master/8/Dockerfile), [dropdog/docker](https://hub.docker.com/r/dropdog/docker/~/dockerfile/), [Boran/docker-drupal](https://github.com/Boran/docker-drupal/blob/master/Dockerfile), [ricardoamaro/docker-drupal](https://github.com/ricardoamaro/docker-drupal/blob/master/Dockerfile))
