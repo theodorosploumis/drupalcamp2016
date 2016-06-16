@@ -184,7 +184,7 @@ docker run -i -t -d ubuntu:15.04 pwd
 
 ### The Dockerfile
 
-> A a text document that contains all the commands a user could call on the command line to create an image.
+> A text document that contains all the commands a user could call on the command line to create an image.
 
  - [Dockerfile with inline comments](https://github.com/theodorosploumis/drupalcamp2016/blob/gh-pages/examples/dockerfile/Dockerfile) just for education
  - Drupal related Dockerfiles ([Drupal](https://github.com/docker-library/drupal/blob/master/8.1/fpm/Dockerfile), [drush/drush](https://github.com/RobLoach/drush-docker/blob/master/8/Dockerfile), [dropdog/docker](https://hub.docker.com/r/dropdog/docker/~/dockerfile/), [Boran/docker-drupal](https://github.com/Boran/docker-drupal/blob/master/Dockerfile), [ricardoamaro/docker-drupal](https://github.com/ricardoamaro/docker-drupal/blob/master/Dockerfile))
@@ -309,7 +309,7 @@ Let's create a Drupal app using [docker-compose.yml](https://github.com/theodoro
 ```
 git clone git@github.com:theodorosploumis/drupalcamp2016.git \
           ~/drupalcamp2016/presentation
-cd ~/drupalcamp2016/presentation/examples/docker-compose
+cd ~/drupalcamp2016/presentation/examples/docker-compose/simple
 
 // Run docker-compose using the docker-compose.yml
 docker-compose up -d
@@ -322,7 +322,7 @@ docker-compose up -d
 ```
 cd ~/drupalcamp2016
 git clone git@github.com:theodorosploumis/drupal-docker.git
-cd drupal-docker
+cd ~/drupalcamp2016/drupal-docker
 
 docker-compose up -d
 
