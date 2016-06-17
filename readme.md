@@ -22,10 +22,9 @@ ________________________
 
 ---
 
-### What is Docker (v1.11)
+### What is Docker
 
 > Docker is an open platform for developing, shipping, and running applications.
-It allows you to package an application with all of its dependencies into a standardized unit for software development.
 
 ---
 
@@ -49,12 +48,12 @@ It allows you to package an application with all of its dependencies into a stan
 
 ### About Docker project
 
- - Solomon Hykes ([@solomonstre](https://twitter.com/solomonstre))
+ - [Solomon Hykes](https://twitter.com/solomonstre)
  - dotCloud (now Docker Inc)
  - March 2013
- - 32k stars on Github
- - 260k public repositories on hub.docker.com
- - Docker Inc acquires everyone <small><sup>TM</sup></small>
+ - 32k stars on [Github](https://github.com/docker/docker/)
+ - 260k public repositories on [hub.docker.com](https://hub.docker.com)
+ - Docker Inc acquires everyone...
 
 ---
 
@@ -62,12 +61,12 @@ It allows you to package an application with all of its dependencies into a stan
 
  - Fast
  - Secure
- - Lightweight (save disk & CPU)
+ - Lightweight
  - Open Source
- - Portable software
+ - Portable
  - Microservices and integrations (APIs)
- - Simplify DevOps
- - Version control capabilities
+ - Extensible
+ - Version control
 
 ---
 
@@ -75,11 +74,11 @@ It allows you to package an application with all of its dependencies into a stan
 
  - Sandbox environment (develop, test, debug, educate)
  - Continuous Integration & Deployment
- - Scaling apps
  - Development collaboration
+ - Prototyping
  - Infrastructure configuration
- - Local development
  - Multi-tier applications
+ - Scaling apps
  - PaaS, SaaS
 
 ###### See the [survey results for 2016](https://www.docker.com/survey-2016)
@@ -90,7 +89,6 @@ It allows you to package an application with all of its dependencies into a stan
 
  - Linux [x86-64](https://www.wikiwand.com/en/X86-64)
  - [Go](https://golang.org/) language
- - [Client - Server](https://www.wikiwand.com/en/Client%E2%80%93server_model) (deamon) architecture
  - Union file systems ([UnionFS](https://www.wikiwand.com/en/UnionFS): AUFS, btrfs, vfs etc)
  - [Namespaces](https://en.wikipedia.org/wiki/Cgroups#NAMESPACE-ISOLATION) (pid, net, ipc, mnt, uts)
  - Control Groups ([cgroups](https://www.wikiwand.com/en/Cgroups))
@@ -100,9 +98,9 @@ It allows you to package an application with all of its dependencies into a stan
 
 ---
 
-### Docker components
+### Basic Docker components
 
- - (Docker) client
+ - client
  - daemon
  - engine
  - compose
@@ -164,7 +162,7 @@ docker run -i -t -d ubuntu:15.04 pwd
  - Creates a new [container](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/ "A runnable instance of the image, basically it is a process isolated by docker that runs on top of the filesystem that an image provides.")
  - Allocates a filesystem and mounts a read-write [layer](https://docs.docker.com/engine/reference/glossary/#filesystem "A set of read-only files to provision the system. Think of a layer as a read only snapshot of the filesystem.")
  - Allocates a [network/bridge interface](https://www.wikiwand.com/en/Bridging_%28networking%29 "")
- - Sets up an [IP address](https://www.wikiwand.com/en/IP_address "An Internet Protocol address (IP address) is a numerical label assigned to each device (e.g., computer, printer) participating in a computer network that uses the Internet Protocol for communication.")
+ - Sets up an [IP address](https://www.wikiwand.com/en/IP_address "An Internet Protocol address (IP address) is a numerical label assigned to each device (e.g., computer, printer) participating in a computer network that uses the Internet Protocol for communication")
  - Executes a process that you specify (``` pwd ```)
  - Captures and provides application output
 
@@ -182,16 +180,7 @@ docker run -i -t -d ubuntu:15.04 pwd
 
 ---
 
-### The Dockerfile
-
-> A text document that contains all the commands a user could call on the command line to create an image.
-
- - [Dockerfile with inline comments](https://github.com/theodorosploumis/drupalcamp2016/blob/gh-pages/examples/dockerfile/Dockerfile) just for education
- - Drupal related Dockerfiles ([Drupal](https://github.com/docker-library/drupal/blob/master/8.1/fpm/Dockerfile), [drush/drush](https://github.com/RobLoach/drush-docker/blob/master/8/Dockerfile), [dropdog/docker](https://hub.docker.com/r/dropdog/docker/~/dockerfile/), [Boran/docker-drupal](https://github.com/Boran/docker-drupal/blob/master/Dockerfile), [ricardoamaro/docker-drupal](https://github.com/ricardoamaro/docker-drupal/blob/master/Dockerfile))
-
----
-
-### Common Docker Commands
+### Explore Docker commands
 
 ```
 // General info
@@ -215,6 +204,15 @@ docker inspect -f "{{ .State.StartedAt }}" [CONTAINER]
 docker rm [CONTAINER]
 
 ```
+
+---
+
+### The Dockerfile
+
+> A text document that contains all the commands a user could call on the command line to create an image.
+
+ - [Dockerfile with inline comments](https://github.com/theodorosploumis/drupalcamp2016/blob/gh-pages/examples/dockerfile/Dockerfile) just for education
+ - Drupal* Dockerfiles ([Drupal](https://github.com/docker-library/drupal/blob/master/8.1/fpm/Dockerfile), [drush/drush](https://github.com/RobLoach/drush-docker/blob/master/8/Dockerfile), [dropdog/docker](https://hub.docker.com/r/dropdog/docker/~/dockerfile/), [Boran/docker-drupal](https://github.com/Boran/docker-drupal/blob/master/Dockerfile), [ricardoamaro/docker-drupal](https://github.com/ricardoamaro/docker-drupal/blob/master/Dockerfile))
 
 ---
 
@@ -328,7 +326,7 @@ docker-compose up -d
 
 // Open http://localhost:8081 (web)
 // Open http://localhost:8090 (phpmyadmin)
-// Open http://localhost:1080 (mailcatcher)
+// Open http://localhost:8025 (mailhog)
 
 ```
 
@@ -361,8 +359,7 @@ There are known best practices (see a list at [examples/tips](https://github.com
 
 ### Instead of Resources
 
- - [Awesome Docker](https://github.com/veggiemonk/awesome-docker)
- - [Docker cheat sheet](https://github.com/wsargent/docker-cheat-sheet)
+ - Join [beta.docker.com](https://beta.docker.com/) now
  - Books: [Docker in Practice](https://www.manning.com/books/docker-in-practice), [The Docker Book](http://www.dockerbook.com/)
  - Tools: [terra](http://terra.readthedocs.io/) / [drude](https://github.com/blinkreaction/drude) / [dropdock](http://dropdock.io/), [kalabox](https://github.com/kalabox/kalabox) / [bowline](https://github.com/davenuman/bowline) / [webfactory](https://github.com/Boran/webfact) / [DockerDrupal](https://www.4alldigital.io/docker-drupal) / [drocker](https://github.com/gabesullice/drocker)
  - Community: [Docker Initiative](https://dockerizedrupal.com) / [D.O. Docker group](https://groups.drupal.org/docker) / [D.O. drupalci_testbot](https://www.drupal.org/project/drupalci_testbot)
