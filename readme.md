@@ -350,10 +350,9 @@ There are known best practices (see a list at [examples/tips](https://github.com
 
 | Type | Software |
 |:----:|----------|
-| Clustering/orchestration | [Swarm](https://docs.docker.com/swarm/), [Kubernetes](http://kubernetes.io/), [Marathon](https://mesosphere.github.io/marathon/), [MaestroNG](https://github.com/signalfx/maestro-ng), [decking](http://decking.io/), [shipyard](http://shipyard-project.com/) |
-| Docker registries | [Portus](http://port.us.org/), [Docker Distribution](https://github.com/docker/distribution), [hub.docker.com](http://hub.docker.com), [quay.io](https://quay.io), [Google container registry](https://cloud.google.com/tools/container-registry/), [Artifactory](https://www.jfrog.com/artifactory/), [projectatomic.io](http://www.projectatomic.io/) |
-| PaaS with Docker | [Rancher](http://rancher.com/), [Tsuru](https://tsuru.io/), [dokku](https://github.com/dokku/dokku), [flynn](https://flynn.io/),  [Octohost](http://octohost.io/), [DEIS](http://deis.io/) |
-| OS made of Containers | [RancherOS](http://rancher.com/rancher-os/) |
+| Cluster &<br>Orchestrate | [Swarm](https://docs.docker.com/swarm/), [Kubernetes](http://kubernetes.io/), [Rancher](http://rancher.com/), [Marathon](https://mesosphere.github.io/marathon/), [MaestroNG](https://github.com/signalfx/maestro-ng), [decking](http://decking.io/), [shipyard](http://shipyard-project.com/) |
+| Registry | [Portus](http://port.us.org/), [Distribution](https://github.com/docker/distribution), [hub.docker.com](http://hub.docker.com), [quay.io](https://quay.io), [G. Container Registry](https://cloud.google.com/tools/container-registry/), [projectatomic.io](http://www.projectatomic.io/) |
+| PaaS | [Rancher](http://rancher.com/), [Tsuru](https://tsuru.io/), [dokku](https://github.com/dokku/dokku), [flynn](https://flynn.io/),  [Octohost](http://octohost.io/), [DEIS](http://deis.io/) |
 
 ---
 
@@ -362,7 +361,7 @@ There are known best practices (see a list at [examples/tips](https://github.com
  - Join [beta.docker.com](https://beta.docker.com/) now
  - Books: [Docker in Practice](https://www.manning.com/books/docker-in-practice), [The Docker Book](http://www.dockerbook.com/)
  - Tools: [terra](http://terra.readthedocs.io/) / [drude](https://github.com/blinkreaction/drude) / [dropdock](http://dropdock.io/), [kalabox](https://github.com/kalabox/kalabox) / [bowline](https://github.com/davenuman/bowline) / [webfactory](https://github.com/Boran/webfact) / [DockerDrupal](https://www.4alldigital.io/docker-drupal) / [drocker](https://github.com/gabesullice/drocker)
- - Community: [Docker Initiative](https://dockerizedrupal.com) / [D.O. Docker group](https://groups.drupal.org/docker) / [D.O. drupalci_testbot](https://www.drupal.org/project/drupalci_testbot)
+ - Community: [Dockerized Drupal](https://dockerizedrupal.com) / [D.O. Docker group](https://groups.drupal.org/docker) / [D.O. drupalci_testbot](https://www.drupal.org/project/drupalci_testbot)
 
 ---
 
