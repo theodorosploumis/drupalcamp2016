@@ -214,7 +214,6 @@ docker rm [CONTAINER]
 - Docker [Volume](https://docs.docker.com/engine/userguide/containers/dockervolumes/)
 - Using [docker-compose](https://docs.docker.com/compose/)
 - Advanced usage of docker-compose
-- Scale a containerized Drupal app
 
 ---
 
