@@ -13,15 +13,6 @@ ________________________
 
 ---
 
-### Let me ask you
-
-- Who knows about [Docker](http://docker.com)?
-- Who uses Docker for development?
-- Who uses Docker in production?
-- Who tried but could not do it?
-
----
-
 ### What is Docker
 
 > Docker is an open platform for developing, shipping, and running applications.
@@ -30,7 +21,7 @@ ________________________
 
 ### Docker vs VMs
 
-![Docker vs traditional Virtualization](https://insights.sei.cmu.edu/assets/content/VM-Diagram.png)
+![Docker vs traditional Virtualization](https://raw.githubusercontent.com/theodorosploumis/drupalcamp2016/gh-pages/img/vm_vs_containers.png)
 
 ---
 
@@ -98,7 +89,7 @@ ________________________
 
 ---
 
-### Basic Docker components
+### Basic Docker (v 1.11) components
 
  - client
  - daemon
@@ -326,7 +317,6 @@ docker-compose up -d
 
 // Open http://localhost:8081 (web)
 // Open http://localhost:8090 (phpmyadmin)
-// Open http://localhost:8025 (mailhog)
 
 ```
 
