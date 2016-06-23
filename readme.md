@@ -146,7 +146,7 @@ but instead through the Docker client with the RESTful api or sockets.
 ### Steps of a Docker workflow
 
 ```
-docker run -i -t -d ubuntu:15.04 pwd
+docker run -i -t ubuntu:15.04 uname -a
 ```
 
  - Pulls the ubuntu:15.04 [image](https://docs.docker.com/engine/userguide/containers/dockerimages/ "A read-only layer that is the base of your container. It can have a parent image to abstract away the more basic filesystem snapshot.") from the [registry](https://docs.docker.com/registry/ "The central place where all publicly published images live. You can search it, upload your images there and when you pull a docker image, it comes the repository/hub.")
@@ -154,7 +154,7 @@ docker run -i -t -d ubuntu:15.04 pwd
  - Allocates a filesystem and mounts a read-write [layer](https://docs.docker.com/engine/reference/glossary/#filesystem "A set of read-only files to provision the system. Think of a layer as a read only snapshot of the filesystem.")
  - Allocates a [network/bridge interface](https://www.wikiwand.com/en/Bridging_%28networking%29 "")
  - Sets up an [IP address](https://www.wikiwand.com/en/IP_address "An Internet Protocol address (IP address) is a numerical label assigned to each device (e.g., computer, printer) participating in a computer network that uses the Internet Protocol for communication")
- - Executes a process that you specify (``` pwd ```)
+ - Executes a process that you specify (```uname -a```)
  - Captures and provides application output
 
 ---
@@ -292,7 +292,7 @@ drush dl devel
 
 ### Example: Using Docker Compose
 
-Let's create a Drupal app using [docker-compose.yml](https://github.com/theodorosploumis/drupalcamp2016/blob/gh-pages/examples/docker-compose/docker-compose.yml)
+Let's create a Drupal app using [docker-compose.yml](https://github.com/theodorosploumis/drupalcamp2016/blob/gh-pages/examples/docker-compose/simple/docker-compose.yml)
 
 ```
 git clone git@github.com:theodorosploumis/drupalcamp2016.git \
@@ -307,6 +307,8 @@ docker-compose up -d
 
 ### Example: More advanced docker-compose
 
+Drupal + other software together ([github.com/theodorosploumis/drupal-docker](https://github.com/theodorosploumis/drupal-docker)).
+
 ```
 cd ~/drupalcamp2016
 git clone git@github.com:theodorosploumis/drupal-docker.git
@@ -316,6 +318,19 @@ docker-compose up -d
 
 // Open http://localhost:8081 (web)
 // Open http://localhost:8090 (phpmyadmin)
+
+// Prepare Drupal for installation
+docker exec drupal_8081 bash /scripts/prepare-install.sh
+
+// Install with Drush
+docker exec drupal_8081 /drush/drush \
+    site-install -y standard \
+    --site-name="Drupal 8 with Docker - Drush" \
+    --db-url=mysql://drupal:drupal@mysql/drupal \
+    --site-mail=admin@example.com \
+    --account-name=admin \
+    --account-pass=admin \
+    --account-mail=admin@example.com
 
 ```
 
@@ -347,7 +362,7 @@ There are known best practices (see a list at [examples/tips](https://github.com
 
 ### Instead of Resources
 
- - Join [beta.docker.com](https://beta.docker.com/) now
+ - [docs.docker.com](https://dpcs.docker.com/)
  - Books: [Docker in Practice](https://www.manning.com/books/docker-in-practice), [The Docker Book](http://www.dockerbook.com/)
  - Tools: [terra](http://terra.readthedocs.io/) / [drude](https://github.com/blinkreaction/drude) / [dropdock](http://dropdock.io/), [kalabox](https://github.com/kalabox/kalabox) / [bowline](https://github.com/davenuman/bowline) / [webfactory](https://github.com/Boran/webfact) / [DockerDrupal](https://www.4alldigital.io/docker-drupal) / [drocker](https://github.com/gabesullice/drocker)
  - Community: [Dockerized Drupal](https://dockerizedrupal.com) / [D.O. Docker group](https://groups.drupal.org/docker) / [D.O. drupalci_testbot](https://www.drupal.org/project/drupalci_testbot)
