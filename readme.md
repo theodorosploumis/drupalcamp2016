@@ -307,7 +307,7 @@ docker-compose up -d
 
 ### Example: More advanced docker-compose
 
-Drupal + other software together ([github.com/theodorosploumis/drupal-docker](https://github.com/theodorosploumis/drupal-docker)).
+[Drupal + friends](https://github.com/theodorosploumis/drupal-docker) together.
 
 ```
 cd ~/drupalcamp2016
