@@ -7,7 +7,7 @@
 ###### [TheodorosPloumis.com](http://www.theodorosploumis.com/en) / [@theoploumis](http://twitter.com/theoploumis)
 ________________________
 
-###### Get them: [online presentation](http://theodorosploumis.github.io/drupalcamp2016/) / [source code](https://github.com/theodorosploumis/drupalcamp2016) / [docker image](https://hub.docker.com/r/tplcom/drupalcamp2016/) / [video](http://youtube.com)
+###### Get them: [online presentation](http://theodorosploumis.github.io/drupalcamp2016/) / [source code](https://github.com/theodorosploumis/drupalcamp2016) / [docker image](https://hub.docker.com/r/tplcom/drupalcamp2016/)
 
 ###### Under [Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/) license.
 
@@ -362,7 +362,7 @@ There are known best practices (see a list at [examples/tips](https://github.com
 
 ### Instead of Resources
 
- - [docs.docker.com](https://dpcs.docker.com/)
+ - [docs.docker.com](https://docs.docker.com/)
  - Books: [Docker in Practice](https://www.manning.com/books/docker-in-practice), [The Docker Book](http://www.dockerbook.com/)
  - Tools: [terra](http://terra.readthedocs.io/) / [drude](https://github.com/blinkreaction/drude) / [dropdock](http://dropdock.io/), [kalabox](https://github.com/kalabox/kalabox) / [bowline](https://github.com/davenuman/bowline) / [webfactory](https://github.com/Boran/webfact) / [DockerDrupal](https://www.4alldigital.io/docker-drupal) / [drocker](https://github.com/gabesullice/drocker)
  - Community: [Dockerized Drupal](https://dockerizedrupal.com) / [D.O. Docker group](https://groups.drupal.org/docker) / [D.O. drupalci_testbot](https://www.drupal.org/project/drupalci_testbot)
