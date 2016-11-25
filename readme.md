@@ -37,8 +37,6 @@ ________________________
 
 ---
 
----
-
 ### Docker History
 
  - Solomon Hykes ([@solomonstre](https://twitter.com/solomonstre))
