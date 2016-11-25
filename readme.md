@@ -215,7 +215,7 @@ Screencast: [Steps of a Docker workflow](https://asciinema.org/a/1yqyy1uu1taxciq
 
 ### Docker examples
 
-- Terminal inside a container
+- SSH into a container
 - Common Docker commands
 - [Linked](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/) containers
 - Docker [Volume](https://docs.docker.com/engine/userguide/containers/dockervolumes/)
@@ -234,7 +234,7 @@ Screencast: [SSH into a container](https://asciinema.org/a/0z4bu6ub4l3z6n3t6b0d5
 
 ---
 
-### Common Docker Commands
+### Example: Common Docker Commands
 
 ```
 // General info
