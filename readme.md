@@ -213,6 +213,27 @@ Screencast: [Steps of a Docker workflow](https://asciinema.org/a/1yqyy1uu1taxciq
 
 ---
 
+### Docker examples
+
+- Terminal inside a container
+- Common Docker commands
+- [Linked](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/) containers
+- Docker [Volume](https://docs.docker.com/engine/userguide/containers/dockervolumes/)
+- Using [docker-compose](https://docs.docker.com/compose/)
+- Advanced usage of docker-compose
+
+---
+
+### Example: SSH into a container
+
+```
+docker pull ubuntu
+docker run -it --name ubuntu_example ubuntu /bin/bash
+```
+Screencast: [SSH into a container](https://asciinema.org/a/0z4bu6ub4l3z6n3t6b0d5e35g)
+
+---
+
 ### Common Docker Commands
 
 ```
@@ -242,26 +263,6 @@ docker rm [CONTAINER]
 Screencast: [Common Docker commands](https://asciinema.org/a/3hczjxzuvih674htyis6o8q6t)
 
 ----
-
-### Docker examples
-
-- Terminal inside a container
-- [Linked](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/) containers
-- Docker [Volume](https://docs.docker.com/engine/userguide/containers/dockervolumes/)
-- Using [docker-compose](https://docs.docker.com/compose/)
-- Advanced usage of docker-compose
-
----
-
-### Example: SSH into a container
-
-```
-docker pull ubuntu
-docker run -it --name ubuntu_example ubuntu /bin/bash
-```
-Screencast: [SSH into a container](https://asciinema.org/a/0z4bu6ub4l3z6n3t6b0d5e35g)
-
----
 
 ### Example: Docker link containers
 
