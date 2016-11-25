@@ -345,6 +345,7 @@ cd ~/drupalcamp2016/presentation/examples/docker-compose/simple
 // Run docker-compose using the docker-compose.yml
 docker-compose up -d
 ```
+Sreencast: [Docker compose simple example](https://asciinema.org/a/ewdsoyphlf29bpa5cvgx8d1k6)
 
 ---
 
