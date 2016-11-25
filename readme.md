@@ -345,7 +345,7 @@ cd ~/drupalcamp2016/presentation/examples/docker-compose/simple
 // Run docker-compose using the docker-compose.yml
 docker-compose up -d
 ```
-Sreencast: [Docker compose simple example](https://asciinema.org/a/ewdsoyphlf29bpa5cvgx8d1k6)
+Screencast: [Docker compose simple example](https://asciinema.org/a/ewdsoyphlf29bpa5cvgx8d1k6)
 
 ---
 
@@ -360,14 +360,14 @@ cd ~/drupalcamp2016/drupal-docker
 
 docker-compose up -d
 
-// Open http://localhost:8081 (web)
+// Open http://localhost:8082 (web)
 // Open http://localhost:8090 (phpmyadmin)
 
 // Prepare Drupal for installation
-docker exec drupal_8081 bash /scripts/prepare-install.sh
+docker exec drupal_8082 bash /scripts/prepare-install.sh
 
 // Install with Drush
-docker exec drupal_8081 /drush/drush \
+docker exec drupal_8082 drush \
     site-install -y standard \
     --site-name="Drupal 8 with Docker - Drush" \
     --db-url=mysql://drupal:drupal@mysql/drupal \
@@ -377,6 +377,7 @@ docker exec drupal_8081 /drush/drush \
     --account-mail=admin@example.com
 
 ```
+Screencast: []()
 
 ---
 
