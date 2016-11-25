@@ -262,7 +262,7 @@ docker rm [CONTAINER]
 ```
 Screencast: [Common Docker commands](https://asciinema.org/a/3hczjxzuvih674htyis6o8q6t)
 
-----
+---
 
 ### Example: Docker link containers
 
