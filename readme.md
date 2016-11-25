@@ -307,7 +307,7 @@ Let's mount local files to a docker container
 
 ```
 cd ~/drupalcamp2016
-drush dl drupal-8.1.2
+drush dl drupal-8.2.3
 cd ~/drupalcamp2016/drupal-8.1.2
 
 // Start a container for mysql
@@ -316,7 +316,7 @@ docker run --name mysql_container \
            -e MYSQL_DATABASE=drupal \
            -e MYSQL_USER=drupal \
            -e MYSQL_PASSWORD=drupal \
-           -d mysql:5.5
+           -d mysql:8
 
 // Start drupal container with volume
 // Folder "modules" locally is mounted to the container
@@ -324,7 +324,7 @@ docker run -d --name drupal_with_mysql_volumed \
            -p 8290:80 \
            --link mysql_container:mysql \
            -v $(pwd)/modules:/var/www/html/modules \
-           drupal:8.1.2-apache
+           drupal:8.2.3-apache
 
 drush dl devel
 // Devel module is available on the container
