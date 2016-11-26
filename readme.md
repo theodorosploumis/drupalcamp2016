@@ -379,7 +379,7 @@ docker exec drupal_8082 drush \
     --account-mail=admin@example.com
 
 ```
-Screencast: [Drupal with MySQL, PhpMyAadmin, Drush, Drupal console etc](https://asciinema.org/a/bmsaz1ltrnap179m62vjruot0)
+Screencast: [Drupal & PhpMyAadmin, Drush, Console etc](https://asciinema.org/a/bmsaz1ltrnap179m62vjruot0)
 
 ---
 
