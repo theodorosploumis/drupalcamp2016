@@ -221,6 +221,7 @@ Screencast: [Steps of a Docker workflow](https://asciinema.org/a/1yqyy1uu1taxciq
 - Docker [Volume](https://docs.docker.com/engine/userguide/containers/dockervolumes/)
 - Using [docker-compose](https://docs.docker.com/compose/)
 - Advanced usage of docker-compose
+- Scale containers with docker-compose
 
 ---
 
@@ -308,7 +309,7 @@ Let's mount local files to a docker container
 ```
 cd ~/drupalcamp2016
 drush dl drupal-8.2.3
-cd ~/drupalcamp2016/drupal-8.1.2
+cd ~/drupalcamp2016/drupal-8.2.3
 
 // Start a container for mysql
 docker run --name mysql_container \
@@ -326,6 +327,7 @@ docker run -d --name drupal_with_mysql_volumed \
            -v $(pwd)/modules:/var/www/html/modules \
            drupal:8.2.3-apache
 
+// Locally type (assuming you have drush installed on host)
 drush dl devel
 // Devel module is available on the container
 
@@ -377,7 +379,37 @@ docker exec drupal_8082 drush \
     --account-mail=admin@example.com
 
 ```
-Screencast: []()
+Screencast: [Drupal with MySQL, PhpMyAadmin, Drush, Drupal console etc](https://asciinema.org/a/bmsaz1ltrnap179m62vjruot0)
+
+---
+
+### Example: Scale containers with docker-compose
+
+```
+cd ~/drupalcamp2016
+git clone git@github.com:theodorosploumis/drupal-docker.git
+cd ~/drupalcamp2016/drupal-docker
+
+docker-compose up -d
+// Continue as before and install Drupal with drush...
+
+// Scale the Drupal slave service
+docker-compose scale drupal_slave=10
+
+// Show the new slave containers IP Addresses
+docker exec drupaldocker_drupal_slave_1 hostname -I
+
+// Show the IP Address using Docker
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' drupaldocker_drupal_slave_1
+...
+
+// Slaves share the same mysql and files
+docker exec drupaldocker_drupal_slave_1 drush status
+docker exec drupaldocker_drupal_slave_2 drush status
+...
+
+```
+Screencast: [Scale Drupal with docker-compose](https://asciinema.org/a/45e87mjaj4x3b2p4jirobii5n)
 
 ---
 
@@ -421,4 +453,4 @@ There are known best practices (see a list at [examples/tips](https://github.com
 $this->send('[feedback](https://goo.gl/xa3moy)');
 ______________
 
-###### Tools used: [oh my zsh](http://ohmyz.sh/) / [reveal.js](https://github.com/hakimel/reveal.js) / [Simple Docker UI for Chrome](https://github.com/felixgborrego/docker-ui-chrome-app) / [docker compose 1.9.0](https://github.com/docker/compose/releases/tag/1.9.0) / [docker 1.12.3](https://github.com/docker/docker/releases/tag/v1.12.3)
+###### Tools used: [docker 1.12.3](https://github.com/docker/docker/releases/tag/v1.12.3) / [docker compose 1.9.0](https://github.com/docker/compose/releases/tag/1.9.0) / [asciinema](https://asciinema.org), [oh my zsh](http://ohmyz.sh/) / [reveal.js](https://github.com/hakimel/reveal.js) / [Simple Docker UI for Chrome](https://github.com/felixgborrego/docker-ui-chrome-app) /
