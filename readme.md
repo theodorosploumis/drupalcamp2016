@@ -270,10 +270,6 @@ Screencast: [Common Docker commands](https://asciinema.org/a/3hczjxzuvih674htyis
 Let's create a [Drupal app](https://hub.docker.com/_/drupal/) (apache, php, mysql, drupal)
 
 ```
-cd ~/Docker-presentation
-mkdir drupal-link-example
-cd drupal-link-example
-
 docker pull drupal:8.2.3-apache
 docker pull mysql:8
 
@@ -327,7 +323,7 @@ docker run -d --name drupal_with_mysql_volumed \
            -v $(pwd)/modules:/var/www/html/modules \
            drupal:8.2.3-apache
 
-// Locally type (assuming you have drush installed on host)
+// Locally download devel module (assuming you have drush on host)
 drush dl devel
 // Devel module is available on the container
 
