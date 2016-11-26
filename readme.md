@@ -453,4 +453,4 @@ There are known best practices (see a list at [examples/tips](https://github.com
 $this->send('[feedback](https://goo.gl/xa3moy)');
 ______________
 
-###### Tools used: [docker 1.12.3](https://github.com/docker/docker/releases/tag/v1.12.3) / [docker compose 1.9.0](https://github.com/docker/compose/releases/tag/1.9.0) / [asciinema](https://asciinema.org), [oh my zsh](http://ohmyz.sh/) / [reveal.js](https://github.com/hakimel/reveal.js) / [Simple Docker UI for Chrome](https://github.com/felixgborrego/docker-ui-chrome-app) /
+###### Tools used: [docker 1.12.3](https://github.com/docker/docker/releases/tag/v1.12.3) / [docker compose 1.9.0](https://github.com/docker/compose/releases/tag/1.9.0) / [asciinema](https://asciinema.org) / [oh my zsh](http://ohmyz.sh/) / [reveal.js](https://github.com/hakimel/reveal.js) /
