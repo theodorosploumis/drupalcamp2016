@@ -133,9 +133,7 @@ A Client with a Daemon as also as the docker-compose tool. Usually referred simp
 
 ### Docker machine
 
-A tool which makes it really easy to create Docker hosts on your computer,
-on cloud providers and inside your own data center.
-It creates servers, installs Docker on them, then configures the Docker client to talk to them.
+It creates servers (locally, on cloud etc), installs Docker on them, then configures the Docker client to talk to them.
 
 ![Docker machine logo](https://raw.githubusercontent.com/theodorosploumis/docker-presentation/gh-pages/img/docker_machine.png)
 
