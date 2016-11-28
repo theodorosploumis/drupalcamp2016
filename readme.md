@@ -78,7 +78,7 @@ ________________________
 
 ### Technology stack
 
- - Linux [x86-64](https://www.wikiwand.com/en/X86-64) & Windows (Hyper-V)
+ - Linux [x86-64](https://www.wikiwand.com/en/X86-64) & Windows (Server 2016+)
  - [Go](https://golang.org/) language
  - [Client - Server](https://www.wikiwand.com/en/Client%E2%80%93server_model) (deamon) architecture
  - Union file systems ([UnionFS](https://www.wikiwand.com/en/UnionFS): AUFS, btrfs, vfs etc)
@@ -428,6 +428,16 @@ There are known best practices (see a list at [examples/tips](https://github.com
 | Cluster &<br>Orchestrate | [Swarm](https://docs.docker.com/swarm/), [Kubernetes](http://kubernetes.io/), [Rancher](http://rancher.com/), [Marathon](https://mesosphere.github.io/marathon/), [MaestroNG](https://github.com/signalfx/maestro-ng), [decking](http://decking.io/), [shipyard](http://shipyard-project.com/) |
 | Registry | [Portus](http://port.us.org/), [Distribution](https://github.com/docker/distribution), [hub.docker.com](http://hub.docker.com), [quay.io](https://quay.io), [G. Container Registry](https://cloud.google.com/tools/container-registry/), [projectatomic.io](http://www.projectatomic.io/) |
 | PaaS | [Rancher](http://rancher.com/), [Tsuru](https://tsuru.io/), [dokku](https://github.com/dokku/dokku), [flynn](https://flynn.io/),  [Octohost](http://octohost.io/), [DEIS](http://deis.io/) |
+
+---
+
+### Docker alternatives
+
+- [Rocket, rkt](https://github.com/coreos/rkt)
+- [Linux Containers, LXC](https://linuxcontainers.org/)
+- [BSD Jails](https://www.freebsd.org/doc/handbook/jails.html)
+- [Solaris Zones](http://oracle.com/solaris)
+- [drawbridge](http://research.microsoft.com/en-us/projects/drawbridge/)
 
 ---
 
