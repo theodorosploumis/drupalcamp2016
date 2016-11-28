@@ -152,8 +152,8 @@ A tool for defining and running complex applications with Docker
 
 ### Docker swarm
 
-A native clustering tool for Docker. Swarm pools together several Docker
-hosts and exposes them as a single virtual Docker host. It scale up to multiple hosts.
+Swarm pools together several Docker hosts and exposes them as a single virtual Docker host (cluster).
+It scale up to multiple hosts.
 
 ![Docker swarm logo](https://raw.githubusercontent.com/theodorosploumis/docker-presentation/gh-pages/img/docker_swarm.png)
 
