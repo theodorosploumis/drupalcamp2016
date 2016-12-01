@@ -7,7 +7,7 @@
 ###### [TheodorosPloumis.com](http://www.theodorosploumis.com/en) / [@theoploumis](http://twitter.com/theoploumis)
 ________________________
 
-###### Get them: [online presentation](http://theodorosploumis.github.io/drupalcamp2016/) / [source code](https://github.com/theodorosploumis/drupalcamp2016) / [docker image](https://hub.docker.com/r/tplcom/drupalcamp2016/)
+###### Get them: [online presentation](http://theodorosploumis.github.io/drupalcamp2016/) / [source code](https://github.com/theodorosploumis/drupalcamp2016) / [docker image](https://hub.docker.com/r/tplcom/drupalcamp2016/) / [Video](https://goo.gl/pb0eEm)
 
 ###### Under [Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/) license.
 
@@ -19,32 +19,12 @@ ________________________
 
 ---
 
-### Docker vs VMs
-
-![Docker vs traditional Virtualization](https://raw.githubusercontent.com/theodorosploumis/drupalcamp2016/gh-pages/img/vm_vs_containers.png)
-
----
-
-### From Monolithic apps
-
-![Monolithic Architecture](https://raw.githubusercontent.com/theodorosploumis/drupalcamp2016/gh-pages/img/monolithic.png)
-
----
-
-### To Containerized apps
-
-![Containerized Architecture](https://raw.githubusercontent.com/theodorosploumis/drupalcamp2016/gh-pages/img/containerized.png)
-
----
-
 ### Docker History
 
- - Solomon Hykes ([@solomonstre](https://twitter.com/solomonstre))
- - dotCloud (now Docker Inc)
- - March 2013
- - Apache 2.0 license
- - 37k stars on [Github](https://github.com/docker/docker)
- - 270k public repositories on docker hub
+
+| When | Who | License | GH stars |
+| :---: | :---: | :---: | :---: |
+| 03/2013 | [Solomon Hykes](https://twitter.com/solomonstre) | Apache | [37k](https://github.com/docker/docker)|
 
 ---
 
@@ -86,13 +66,6 @@ ________________________
  - Control Groups ([cgroups](https://www.wikiwand.com/en/Cgroups))
  - Container format ([libcontainer](https://github.com/opencontainers/runc/tree/master/libcontainer "Libcontainer provides a native Go implementation for creating containers with namespaces, cgroups, capabilities, and filesystem access controls. It allows you to manage the lifecycle of the container performing additional operations after the container is created."))
 
-###### See more at [Understanding docker](https://docs.docker.com/engine/understanding-docker/)
-
----
-
-### The Docker architecture
-
-![Docker architecture](https://docs.docker.com/engine/article-img/architecture.svg)
 ###### See more at [Understanding docker](https://docs.docker.com/engine/understanding-docker/)
 
 ---
@@ -165,12 +138,6 @@ A (hosted) service containing repositories of images which responds to the Regis
 
 ---
 
-### The Docker Components diagram
-
-![Docker components](https://raw.githubusercontent.com/theodorosploumis/docker-java/master/img/docker-components.png)
-
----
-
 ### Steps of a Docker workflow
 
 ```
@@ -186,6 +153,12 @@ docker run -i -t ubuntu:15.04 /bin/bash
  - Captures and provides application output
 
 Screencast: [Steps of a Docker workflow](https://asciinema.org/a/1yqyy1uu1taxciqf4136sy3ld).
+
+---
+
+### The Docker Components diagram
+
+![Docker components](https://raw.githubusercontent.com/theodorosploumis/docker-java/master/img/docker-components.png)
 
 ---
 
@@ -237,7 +210,6 @@ Screencast: [SSH into a container](https://asciinema.org/a/0z4bu6ub4l3z6n3t6b0d5
 
 ```
 // General info
-man docker // man docker run
 docker help // docker help run
 docker info
 docker version
@@ -245,10 +217,12 @@ docker network ls
 
 // Images
 docker images // docker [IMAGE_NAME]
-docker pull [IMAGE] // docker push [IMAGE]
+docker pull [IMAGE] //
+docker push [IMAGE]
+docker save [IMAGE] // commit, tag, export, load, rmi
 
 // Containers
-docker run
+docker run ...
 docker ps // docker ps -a, docker ps -l
 docker stop/start/restart [CONTAINER]
 docker stats [CONTAINER]
@@ -394,7 +368,8 @@ docker-compose scale drupal_slave=10
 docker exec drupaldocker_drupal_slave_1 hostname -I
 
 // Show the IP Address using Docker
-docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' drupaldocker_drupal_slave_1
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' \
+               drupaldocker_drupal_slave_1
 ...
 
 // Slaves share the same mysql and files
@@ -404,6 +379,42 @@ docker exec drupaldocker_drupal_slave_2 drush status
 
 ```
 Screencast: [Scale Drupal with docker-compose](https://asciinema.org/a/45e87mjaj4x3b2p4jirobii5n)
+
+---
+
+### Docker for Drupal recipes
+
+The Drupal "parts"
+
+- server
+- code
+- database
+- public/private files
+- helper software (eg drush, composer etc)
+
+---
+
+### Docker for Drupal - Combinations and Options
+
+| A/a | Part | Docker options |
+|:---|:-----|:-----|
+|1| Server| Image |
+|2| Code | Image, Volumes, Inside 1 |
+|3| Files | None ([stage_file_proxy](https://www.drupal.org/project/stage_file_proxy)), Image, Inside 2 |
+|4| Database | Image, Inside 1 |
+|5| Helpers | Image, Inside 1, Volumes, None |
+
+---
+
+### From Monolithic apps
+
+![Monolithic Architecture](https://raw.githubusercontent.com/theodorosploumis/drupalcamp2016/gh-pages/img/monolithic.png)
+
+---
+
+### To Containerized apps
+
+![Containerized Architecture](https://raw.githubusercontent.com/theodorosploumis/drupalcamp2016/gh-pages/img/containerized.png)
 
 ---
 
@@ -417,14 +428,14 @@ There are known best practices (see a list at [examples/tips](https://github.com
 - Full stack Images VS 1 process per Container
 - Use files/scripts to setup container
 - Prefer using docker-compose
-- Production needs orchestration tools
+- Production needs orchestration
 
 ---
 
 ### The Docker war
 
 | Type | Software |
-|----|----------|
+|:----|:----------|
 | Cluster & <br>orchestrate | [Swarm](https://docs.docker.com/swarm/), [Kubernetes](http://kubernetes.io/), [Marathon](https://mesosphere.github.io/marathon/), [MaestroNG](https://github.com/signalfx/maestro-ng), [decking](http://decking.io/), [shipyard](http://shipyard-project.com/) |
 | Registry | [Portus](http://port.us.org/), [Docker Distribution](https://github.com/docker/distribution), [docker hub](http://hub.docker.com), [quay.io](https://quay.io), [Google Container Reg.](https://cloud.google.com/tools/container-registry/), [Artifactory](https://www.jfrog.com/artifactory/), [projectatomic.io](http://www.projectatomic.io/), [Treescale.com](https://treescale.com/), [Canister.io](https://www.canister.io/) |
 | PaaS | [Rancher](http://rancher.com/), [Tsuru](https://tsuru.io/), [dokku](https://github.com/dokku/dokku), [flynn](https://flynn.io/),  [Octohost](http://octohost.io/), [DEIS](http://deis.io/) |
@@ -446,7 +457,7 @@ There are known best practices (see a list at [examples/tips](https://github.com
 
  - [docs.docker.com](https://docs.docker.com/)
  - Books: [Docker in Practice](https://www.manning.com/books/docker-in-practice), [The Docker Book](http://www.dockerbook.com/)
- - Tools: [terra](http://terra.readthedocs.io/) / [drude](https://github.com/blinkreaction/drude) / [dropdock](http://dropdock.io/), [kalabox](https://github.com/kalabox/kalabox) / [bowline](https://github.com/davenuman/bowline) / [webfactory](https://github.com/Boran/webfact) / [DockerDrupal](https://www.4alldigital.io/docker-drupal) / [drocker](https://github.com/gabesullice/drocker)
+ - Tools: [terra](http://terra.readthedocs.io/) / [docksal](http://docksal.io/) / [dropdock](http://dropdock.io/), [kalabox](https://github.com/kalabox/kalabox) / [bowline](https://github.com/davenuman/bowline) / [webfactory](https://github.com/Boran/webfact) / [DockerDrupal](https://www.4alldigital.io/docker-drupal) / [drocker](https://github.com/gabesullice/drocker)
  - Community: [Dockerized Drupal](https://dockerizedrupal.com) / [D.O. Docker group](https://groups.drupal.org/docker) / [D.O. drupalci_testbot](https://www.drupal.org/project/drupalci_testbot)
 
 ---
