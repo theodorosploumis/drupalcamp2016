@@ -438,7 +438,7 @@ There are known best practices (see a list at [examples/tips](https://github.com
 |:----|:----------|
 | Cluster & <br>orchestrate | [Swarm](https://docs.docker.com/swarm/), [Kubernetes](http://kubernetes.io/), [Marathon](https://mesosphere.github.io/marathon/), [MaestroNG](https://github.com/signalfx/maestro-ng), [decking](http://decking.io/), [shipyard](http://shipyard-project.com/) |
 | Registry | [Portus](http://port.us.org/), [Docker Distribution](https://github.com/docker/distribution), [docker hub](http://hub.docker.com), [quay.io](https://quay.io), [Google Container Reg.](https://cloud.google.com/tools/container-registry/), [Artifactory](https://www.jfrog.com/artifactory/), [projectatomic.io](http://www.projectatomic.io/), [Treescale.com](https://treescale.com/), [Canister.io](https://www.canister.io/) |
-| PaaS | [Rancher](http://rancher.com/), [Tsuru](https://tsuru.io/), [dokku](https://github.com/dokku/dokku), [flynn](https://flynn.io/),  [Octohost](http://octohost.io/), [DEIS](http://deis.io/) |
+| PaaS | [Rancher](http://rancher.com/), [Tsuru](https://tsuru.io/), [dokku](https://github.com/dokku/dokku), [flynn](https://flynn.io/),  [Octohost](http://octohost.io/) |
 
 ---
 
@@ -457,7 +457,7 @@ There are known best practices (see a list at [examples/tips](https://github.com
 
  - [docs.docker.com](https://docs.docker.com/)
  - Books: [Docker in Practice](https://www.manning.com/books/docker-in-practice), [The Docker Book](http://www.dockerbook.com/)
- - Tools: [terra](http://terra.readthedocs.io/) / [docksal](http://docksal.io/) / [dropdock](http://dropdock.io/), [kalabox](https://github.com/kalabox/kalabox) / [bowline](https://github.com/davenuman/bowline) / [webfactory](https://github.com/Boran/webfact) / [DockerDrupal](https://www.4alldigital.io/docker-drupal) / [drocker](https://github.com/gabesullice/drocker)
+ - Tools: [terra](http://terra.readthedocs.io/) / [docksal](http://docksal.io/) / [dropdock](http://dropdock.io/), [kalabox](https://github.com/kalabox/kalabox) / [bowline](https://github.com/davenuman/bowline) / [Docker4Drupal](https://github.com/wodby/docker4drupal) / [DruDock](https://github.com/4AllDigital/DruDockCli) / [drocker](https://github.com/gabesullice/drocker)
  - Community: [Dockerized Drupal](https://dockerizedrupal.com) / [D.O. Docker group](https://groups.drupal.org/docker) / [D.O. drupalci_testbot](https://www.drupal.org/project/drupalci_testbot)
 
 ---
